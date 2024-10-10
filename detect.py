@@ -120,7 +120,7 @@ def detect(save_img=False):
                 inputs = cropped_img_tensor.unsqueeze(0)
 
                 # Load EDSR model with scale 2
-                edsr_model = EdsrModel.from_pretrained('eugenesiow/edsr-base', scale=4)
+                edsr_model = EdsrModel.from_pretrained('eugenesiow/drln-bam', scale=2)
 
                 # Perform super-resolution on the cropped image
                 preds = edsr_model(inputs)
